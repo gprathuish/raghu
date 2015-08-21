@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
 		layout 'view'
 	def index
 		redirect_to new_user_session_path unless current_user.present?
-		@students = Student.all.order('created_at DESC')
+		@students = Student.all
 	end
 
 	def new
