@@ -1,0 +1,75 @@
+<div class="row">
+	<div class="col-sm-6 pull-right"> 
+		<%= link_to (student_path(@student.id)), method: :delete do %>
+			<button class="btn btn-danger circle pull-right"><i class="fa fa-trash-o fa-2x"></i></button>
+		<% end %>
+	</div>
+	<div class="col-sm-6">
+		<h3>Edit <%= @student.name.capitalize %> Details</h3>
+	</div>
+</div>
+
+<hr>
+	
+<%= form_for @student,  url: student_path, method: :put, html: {class: "form-horizontal"} do |f| %>
+  
+	<div class="form-group">
+    <%= f.label :name, class: "col-sm-2 control-label" %>        
+    <div class="col-sm-10">
+      <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Email" %>          
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email, class: "col-sm-2 control-label" %>        
+    <div class="col-sm-10">
+      <%= f.email_field :email, autofocus: false, class: "form-control", placeholder: "Email" %>          
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :phone, class: "col-sm-2 control-label" %>        
+    <div class="col-sm-10">
+      <%= f.text_field :phone, autofocus: false, class: "form-control", placeholder: "Email" %>          
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dob,"Date of Birth", class: "col-sm-2 control-label" %>        
+    <div class="col-sm-10">
+      <%= f.text_field :dob, autofocus: false, class: "form-control", placeholder: "Email" %>          
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :city, class: "col-sm-2 control-label" %>        
+    <div class="col-sm-10">
+      <%= f.text_field :city, autofocus: false, class: "form-control", placeholder: "Email" %>          
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :country, class: "col-sm-2 control-label" %>        
+    <div class="col-sm-10">
+      <%= f.text_field :country, autofocus: false, class: "form-control", placeholder: "Email" %>          
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">          
+      <%= f.submit "Save", class: "btn btn-info" %>
+      <%= link_to "Cancel",students_path, class: "btn btn-default" %>
+    </div>
+  </div>
+<% end %>
+
+
+

@@ -56,12 +56,13 @@ body{
 #top-menu li{
 	display: inline-block;
 	float: left;
+	line-height: 30px;
 }
 #top-menu li a{
 	color: #80DEEA;
 	font-size: 14px;
 	padding: 8px;
-	text-decoration: none;
+	text-decoration: none;	
 }
 
 #top-menu li a:hover{

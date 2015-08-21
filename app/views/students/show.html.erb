@@ -1,16 +1,27 @@
 <div class="row">
 	<div class="col-sm-6 pull-right"> 
-		<button class="btn btn-danger circle pull-right" > <i class="fa fa-trash-o fa-2x"></i></button>
-		<button class="btn btn-info circle pull-right" > <i class="fa fa-pencil fa-2x"></i></button>		
+		<%= link_to (student_path(@student.id)), method: :delete do %>
+			<button class="btn btn-danger circle pull-right"><i class="fa fa-trash-o fa-2x"></i></button>
+		<% end %>
+
+		<%= link_to (edit_student_path(@student.id)) do %>
+			<button class="btn btn-info circle pull-right"><i class="fa fa-pencil fa-2x"></i></button>
+		<% end %>
+		
 	</div>
 	<div class="col-sm-6">
-		<h3><%= @user.name %></h3>
+		<h3><%= @user.name.capitalize %> Details</h3>
 	</div>
 </div>
 <hr>
 
-<h4><%= @user.email %></h4>
-<h4><%= @user.phone %></h4>
-<h4><%= @user.dob %></h4>
-<h4><%= @user.city %></h4>
-<h4><%= @user.country %></h4>
+<ul class="list-group">
+  <li class="list-group-item"><h4><strong>Name </strong> : <%= @user.name.capitalize %></h4></li>
+  <li class="list-group-item"><h4><strong>Email </strong> : <%= @user.email %></h4></li>
+  <li class="list-group-item"><h4><strong>Phone </strong> : <%= @user.phone %></h4></li>
+  <li class="list-group-item"><h4><strong>Date of Birth </strong> : <%= @user.dob %></h4></li>
+  <li class="list-group-item"><h4><strong>City </strong> : <%= @user.city %></h4></li>
+  <li class="list-group-item"><h4><strong>Country </strong> : <%= @user.country %></h4></li>
+</ul>
+
+<%= link_to "Back",students_path, class: "btn btn-default" %>
