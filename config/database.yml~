@@ -22,3 +22,9 @@ test:
   <<: *default
   database: raghu_test
 
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: raghu_production
+  pool: 5
+  
