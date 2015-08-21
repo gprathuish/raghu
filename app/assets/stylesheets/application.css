@@ -1,0 +1,136 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require bootstrap_and_overrides
+ *= require_tree .
+ *= require_self
+ */
+body{
+	background-color: #2C3E50;
+	background: url('bg2.jpg') fixed; 
+}
+#wrapper{
+	position: absolute;
+  /* center the element */
+  right: 0;
+  left: 0;
+  padding: 0px;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  /* give it dimensions */
+  min-height: 85%;  
+  background-color: #FFF;
+}
+#header{
+	background-color: #008FA6;
+	height: 130px;
+	display: block;	
+	color: #FFF;
+	position: relative;
+}
+#header h1{
+	margin: 0px;
+	padding: 0px 0px 7px 0px;	
+}
+
+#top-menu{
+	display: block;
+	width: 100%;
+	height: 20px;
+	clear: both;
+	padding-top: 10px;
+}
+#top-menu ul{
+	display: inline-block;	
+}
+#top-menu li{
+	display: inline-block;
+	float: left;
+}
+#top-menu li a{
+	color: #80DEEA;
+	font-size: 14px;
+	padding: 8px;
+	text-decoration: none;
+}
+
+#top-menu li a:hover{
+	color: #B2EBF2;	
+}
+
+.box{
+	margin: 0 5%;
+}
+.top-margin-4{
+	margin-top: 4%;
+}
+.overflow{
+	overflow-y: scroll;
+}
+#menu{
+	display: block;
+	width: 100%;
+	height: auto;
+	clear: both;
+	position: absolute;	
+	bottom: 0;
+}
+#menu ul{
+	list-style: none;
+	display: inline-block;
+	clear: both;	
+}
+#menu li{
+	display: block;
+	float: left;
+	list-style: none;
+}
+#menu li a{
+	color: #FFF;
+	widows: auto;
+	background-color: red;
+	padding: 10px 0px 10px 10px;
+	font-size: 12px;
+}
+.circle {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px; 
+	margin-left: 10px;
+	/* width and height can be anything, as long as they're equal */
+}
+.logo-img{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px; 
+}
+/* Menu */
+@media only screen and (device-width: 768px), (max-width: 768px) {
+	#header{
+		height: auto;
+	}
+}
+
+.navbar, .navbar-default {
+	background-color: transparent;
+	color: rgba(255, 255, 255, 0.84);
+	border: none;
+	font-size: 14px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+	border-bottom: 3px solid #26C6DA;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	border: none;
+}
