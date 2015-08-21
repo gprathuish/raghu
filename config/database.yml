@@ -22,8 +22,3 @@ test:
   <<: *default
   database: raghu_test
 
-production:
-  <<: *default
-  database: raghu_production
-  username: raghu
-  password: <%= ENV['RAGHU_DATABASE_PASSWORD'] %>
